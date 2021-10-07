@@ -5,6 +5,7 @@ import {toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 //import Snackbar from '@material-ui/core/Snackbar'
 
+
 toast.configure()
 
 export default function CusRegistration(){
@@ -53,7 +54,7 @@ export default function CusRegistration(){
             toast.success('Registration Success',{position:toast.POSITION.TOP_CENTER});
             window.location = "/login"
         }).catch((err)=>{
-            alert(err);
+            toast.warning('Customer account already exists. Please check your Email.',{position:toast.POSITION.TOP_CENTER});;
         })
         }else{
             //alert("Password dismatch")
@@ -108,14 +109,17 @@ export default function CusRegistration(){
                                 <br/>
                                 <h1 class="label">Email Address</h1>
                                 <div className="form-group mb-3">
-                                <input class="form-styling" type="email" className="form-control form-control-user" placeholder="Email Address"
+                                <input class="form-styling" type="email" className="form-control form-control-user"
+                            
+                                pattern="(?![.-])((?![.-][.-])[a-zA-Z\d.-]){0,63}[a-zA-Z\d]@((?!-)((?!--)[a-zA-Z\d-]){0,63}[a-zA-Z\d]\.){1,2}([a-zA-Z]{2,14}\.)?[a-zA-Z]{2,14}"
+                                inputMode="email"
                                 onChange={(e) => setEmail(e.target.value)} required/>
                                 </div>
                             
                                 <div className="form-group row mb-3">
                                 <div className="col-sm-6">
                                 <h1 class="label" >Mobile</h1>
-                                    <input class="form-styling" type="tel" className="form-control form-control-user" placeholder="Phone Number"
+                                    <input class="form-styling" type="text" className="form-control form-control-user" placeholder="Phone Number"
                                     onChange={(e) => setPhoneNumber(e.target.value)} pattern="[0-9]{10}" required/>
                                 </div>
                                 <div className="col-sm-6">
@@ -164,8 +168,11 @@ export default function CusRegistration(){
                                 <h1 class="label" >Password</h1>
                                 <div className="form-group row mb-3">
                                 <div className="col-sm-6">
-                                    <input class="form-styling" type="password" className="form-control form-control-user" placeholder="Password"
+                                    <input class="form-styling" type="password" className="form-control form-control-user" 
+                                    placeholder="Password"
+                                    pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$" 
                                     onChange={(e) => setPassowrd1(e.target.value)} required/>
+                                    {/*<p class="aabb">  (Your password MUST contain at least 8 charactors, including UPPER-lowercase letters and at least one number and a charactor.)</p>*/}
                                 </div>
 
                                 <div className="col-sm-6">

@@ -28,8 +28,19 @@ connection.once("open", () => {
     console.log("Mongodb connection success!!!");
 })
 
-const customerRouter = require("./routes/customer.js")
+// @import routes
+const customerRouter = require("./routes/DH_routes/customer")
+
+
+// report generate routes
+
+
+// rotues
 app.use("/customer",customerRouter);
+
+
+
+
 
 app.listen(PORT, () => {
     console.log(`Server is up and running on port number: ${PORT}`)

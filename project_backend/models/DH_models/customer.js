@@ -24,12 +24,10 @@ const customerSchema = new mongoose.Schema({
   },
   area: {
     type: String,
-
     trim: true,
   },
   pscode: {
     type: String,
- 
     trim: true,
   },
   country: {

@@ -29,7 +29,7 @@ const UpdateProfile = ({
     const [country, setCountry] = useState(upcountry)
     const [phone, setPhone] = useState(upphone)
     const [email, setEmail] = useState(upemail)
-    const [pwd, setPwd] = useState(uppwd)
+    //const [pwd, setPwd] = useState(uppwd)
     //const [imageUrl, setImage] = useState(upimageUrl)
 
     const updateUserProfile = async (e) => {
@@ -50,7 +50,7 @@ const UpdateProfile = ({
         country: country,
         phone: phone,
         email: email,
-        pwd: pwd,
+        //pwd: pwd,
         //imageUrl: imageUrl
       }
 

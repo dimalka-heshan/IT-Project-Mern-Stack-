@@ -1,6 +1,6 @@
 const jwt = require("jsonwebtoken");
 const config = require("config");
-const customer = require("../models/customer");
+const customer = require("../../models/DH_models/customer");
 
 const auth = async (req, res, next) => {
   try {

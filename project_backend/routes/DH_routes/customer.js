@@ -1,10 +1,10 @@
 const express = require("express");
 const router = require("express").Router();
-let customer = require("../models/customer");
+let customer = require("../../models/DH_models/customer");
 const validator = require("validator");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const auth = require('../middleware/auth');
+const auth = require('../../middleware/cus_middleware/auth');
 
 
 
@@ -33,7 +33,6 @@ router.post("/signup", async (req, res) => {
       let customer1 = await customer.findOne({ email });
     if (customer1) {
       throw new Error("User already exists");
- 
     }
 
       customer1 = {

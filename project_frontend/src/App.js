@@ -1,10 +1,10 @@
 import './App.css';
-import CusRegistration from "./components/CusRegistration";
-import CusLogin from "./components/CusLogin";
-import CusProfile from "./components/CusProfile";
-import CusUpdate from "./components/CusUpdate";
+import CusRegistration from "./components/DH_Components/CusRegistration";
+import CusLogin from "./components/DH_Components/CusLogin";
+import CusProfile from "./components/DH_Components/CusProfile";
+import CusUpdate from "./components/DH_Components/CusUpdate";
 import {BrowserRouter as Router,Route} from 'react-router-dom';
-import Header from "./components/Header";
+import Header from "./components/DH_Components/Header";
 
 function App() {
   return (
