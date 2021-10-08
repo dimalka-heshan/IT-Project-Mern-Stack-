@@ -39,6 +39,13 @@ const customerRouter = require("./routes/DH_routes/customer")
 app.use("/customer",customerRouter);
 
 
+//@import NT Routes
+const adminRouter = require("./routes/NT_routes/admin");
+app.use("/admin",adminRouter);
+const discountRouter =require("./routes/NT_routes/discount");
+app.use("/discount",discountRouter);
+
+
 
 
 
