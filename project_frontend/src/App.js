@@ -8,6 +8,7 @@ import Header from "./components/DH_Components/Header";
 
 function App() {
   return (
+  <>
     <Router>
       <Header/>
       <Route path="/signup" exact component={CusRegistration}/>
@@ -15,6 +16,8 @@ function App() {
       <Route path="/profile" exact component={CusProfile}/>
       <Route path="/update" exact component={CusUpdate}/>
     </Router>
+  
+  </> 
   );
 }
 
