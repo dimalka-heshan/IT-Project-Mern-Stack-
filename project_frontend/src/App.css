@@ -1,5 +1,4 @@
 @import url('http://fonts.googleapis.com/css?family=Lato&display=swap');
-@import url('http://fonts.googleapis.com/css?family=Lato&display=swap');
 
 * {
     box-sizing: 0;
@@ -31,4 +30,4 @@ body{
 input:not(:placeholder-shown):invalid{
   background-color:pink;
   box-shadow:0 0 0 2px red;
-  }
+}
